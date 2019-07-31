@@ -1,0 +1,97 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "airbnb-base",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+        "prettier"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "settings": {
+        "import/resolver": {
+            "webpack": {
+                "config": "webpack/prod.js"
+            }
+        }
+    },
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "off"
+        ],
+        "no-debugger": [
+            "off"
+        ],
+        "no-console": [
+            "off"
+        ],
+        "curly": [
+            "error",
+            "multi-or-nest",
+            "consistent"
+        ],
+        "nonblock-statement-body-position": [
+            "off"
+        ],
+        "func-names": [
+            "error",
+            "never"
+        ],
+        "space-before-function-paren": [
+            "error",
+            {
+                "anonymous": "never",
+                "named": "never",
+                "asyncArrow": "always"
+            }
+        ],
+        "object-curly-newline": [
+            "off"
+        ],
+        "no-param-reassign": [
+            "error",
+            {
+                "props": false
+            }
+        ],
+        "arrow-parens": [
+            "error",
+            "as-needed"
+        ],
+        "arrow-body-style": [
+            "error",
+            "as-needed"
+        ],
+        "no-plusplus": [
+            "error",
+            {
+                "allowForLoopAfterthoughts": true
+            }
+        ],
+        "import/no-extraneous-dependencies": [
+            "off"
+        ],
+        "global-require": [
+            "off"
+        ],
+        "prettier/prettier": "error",
+        "@typescript-eslint/no-var-requires": [
+            "off"
+        ]
+    }
+}
