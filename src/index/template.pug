@@ -1,0 +1,186 @@
+extends ../layout
+
+block var
+    - const title = 'Северный Мишка'
+
+mixin block(img, name)
+    .block
+        img(src=img)
+        p= name
+
+block content
+
+    header
+        #logo
+        nav
+            ul
+                li(data-section-id='#main-screen') ГЛАВНАЯ
+                li(data-section-id='#about-us') О НАС
+                li(data-section-id='#tariffs') ТАРИФЫ
+                li(data-section-id='#partners') ПАРТНЁРЫ
+                li(data-section-id='#submit-application') ОСТАВИТЬ ЗАЯВКУ
+        #phone-number 8 914 277-66-77
+
+    section#main-screen
+        h1 СКЛАДСКИЕ УСЛУГИ
+        #separator
+        p
+            | Ответ-хранение<br>
+            | Переработка грузов<br>
+            | Транспортно-экспедиторские услуги по г.Якутск и РС(Я)<br>
+            | Доставка в районы Крайнего Севера<br>
+
+    section#about-us
+        h2 О нас
+        p
+            | Труд сделал из счастливой обезьяны человека. Человек - это звучит гордо.<br>
+            | Я горжусь своим трудом!<br>
+        #figures
+            figure
+                img(src=require('./img/teamwork.png'), alt='teamwork')
+                figcaption Трудимся с 2009
+            figure
+                img(src=require('./img/truck.png'), alt='truck')
+                figcaption Отгружаем в районы Крайнего Севера
+            figure
+                img(src=require('./img/cargo.png'), alt='cargo')
+                figcaption Полный спектр складских услуг
+
+    section#tariffs
+        h2 Тарифы
+        nav
+            ul
+                li Складские работы
+                li Складские услуги
+                li Транспортные услуги
+            #highlighter
+        #tariffs-slider
+            #tariffs-slider-content
+                .column
+                    .row
+                        .description
+                            .title
+                                | Погрузо-разгрузочные работы<br>
+                                | за куб.м. (1 операция)<br>
+                            .prices
+                                p Погрузка/выгрузка
+                                span 130 руб.
+                                p С формированием
+                                span 170 руб.
+                                p Взвешивание груза
+                                span 130 руб.
+                                p Доупаковка/паллетирование
+                                span 600 руб.
+                                p Обрешетка груза
+                                span 800 руб.
+                        .image
+                            img(src=require('./img/tariffs-1.jpg'))
+                    .row
+                        .image
+                            img(src=require('./img/tariffs-2.jpg'))
+                        .description
+                            .title
+                                | Погрузо-разгрузочные работы<br>
+                                | за тонну (1 операция)<br>
+                            .prices
+                                p Погрузка/выгрузка
+                                span 660 руб.
+                                p С формированием
+                                span 880 руб.
+                                p Взвешивание
+                                span 550 руб.
+                .column
+                    .row
+                        .description
+                            .title Хранение
+                            .prices
+                                p Хранение груза в крытом помещении
+                                span 45 руб./м^3/сут.
+                                p Хранение груза на открытой площадке
+                                span 30 руб./м^3/сут.
+                        .image
+                            img(src=require('./img/tariffs-3.jpg'))
+                    .row
+                        .image
+                            img(src=require('./img/tariffs-4.jpg'))
+                        .description
+                            .title Дополнительные услуги
+                            .prices
+                                p Пломбирование
+                                span 420 руб.
+                                p Маркировка
+                                span 5 руб./место
+                                p Фотоотчет погрузки
+                                span 6 руб./место
+                .column
+                    .row
+                        .description
+                            .title Мирный - Якутск - Усть-Нера
+                            .prices
+                                p Якутск - Мирный
+                                span до 15000 руб./м^3
+                                p Якутск - Мирный
+                                span до 60 руб./кг
+                                p Якутск - Усть-Нера
+                                span до 15000 руб./м^3
+                                p Якутск - Усть-Нера
+                                span до 60 руб./кг
+                        .image
+                            img(src=require('./img/tariffs-5.jpg'))
+                    .row
+                        .image
+                            img(src=require('./img/tariffs-6.jpg'))
+                        .description
+                            .title Тикси - Чокурдах - Черский (автозимник)
+                            .prices
+                                p Якутск - Тикси, Чокурдах, Черский
+                                span до 25000 руб./м^3
+                                p Якутск - Тикси, Чокурдах, Черский
+                                span до 60 руб./кг
+                    .row
+                        .description
+                            .title Тикси - Чокурдах - Черский (корабль)
+                            .prices
+                                p Якутск - Тикси, Чокурдах, Черский
+                                span до 25000 руб./м^3
+                                p Якутск - Тикси, Чокурдах, Черский
+                                span до 60 руб./кг
+                        .image
+                            img(src=require('./img/tariffs-7.jpg'))
+    section#partners
+        h2 Партнеры
+        #partners-slider-wrapper
+            #arrow-left.arrow
+            #partners-slider
+                #partners-slider-content
+                    +block(require('./img/partner-1.png'), 'ООО «СТЭС»')
+                    +block(require('./img/partner-2.png'), 'АО «Колымавзрывпром')
+                    +block(require('./img/partner-3.png'), 'ООО «ТД Полиметалл»')
+            #arrow-right.arrow
+
+    section#submit-application
+        h2 Оставить заявку
+        form
+            input(type='text' placeholder='Ваше имя')
+            input(type='phone' placeholder='Телефон')
+            input(type='email' placeholder='E-mail')
+            input(type='text' placeholder='Сообщение')
+            input(type='button' value='Отправить')
+
+    section#footer
+        #info
+            .column
+                p Телефон
+                p +7 (914) 277 66 77
+            .column
+                p Адрес
+                p г.Якутск,<br>ул.Новопортовская, 1, к7
+            .column
+                p E-mail
+                p avtoprofigruz@mail.ru
+            .column
+                p Социальные сети
+                #social-networks
+                    img(src=require('./img/instagram.png'))
+                    img(src=require('./img/vk.png'))
+                    img(src=require('./img/skype.png'))

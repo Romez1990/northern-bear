@@ -1,0 +1,301 @@
+@import 'font/PTSans/PTSans'
+@import 'font/PTSerif/PTSerif'
+@import 'font/Roboto/Roboto'
+@import 'font/SitkaSmall/SitkaSmall'
+
+*
+    margin 0
+    padding 0
+    
+html
+    scroll-behavior smooth
+
+img
+    user-select none
+
+li
+    list-style none
+
+header
+    position fixed
+    display flex
+    justify-content space-around
+    align-items center
+    height 73px
+    width 100%
+    background rgba(24, 31, 54, 0.8)
+    color #fffefe
+    font 15px PT Sans, serif
+    z-index 1
+    
+    #logo
+        height 53px
+        width 85px
+        background url(img/logo.png) no-repeat
+        margin 8px 0 12px
+    
+    ul
+        display flex
+        height 100%
+    
+    li
+        padding 9px 0
+        margin 0 14px
+        box-shadow 0 0 #cedbea
+        transition ease-in-out 0.2s
+        transition-property color, box-shadow
+        cursor pointer
+        
+        &hover
+            color #cedbea
+            box-shadow 0 2px #cedbea
+
+#phone-number
+    font-weight bold
+
+section
+    color #191919
+    
+#main-screen
+    padding-top 209px
+    background url(img/main-screen.jpg) center
+    height 606px
+    box-sizing border-box
+    color #fff
+
+h1
+#main-screen p
+    text-align center
+
+h1
+    font 48px Sitka Small, sans-serif
+
+#separator
+    margin 5px auto 14px
+    width 83px
+    height 2px
+    background #fff
+
+#main-screen p
+    margin-top 31px
+    font 18px / 36px PT Serif, serif
+
+h2
+    margin 32px
+    width 303px
+    padding-bottom 12px
+    border-bottom 3px solid #181f36
+    font 36px Roboto, sans-serif
+    text-align center
+
+#about-us
+    display flex
+    flex-direction column
+    align-items center
+    background #f5f5f5
+    
+    h2
+        margin-top 60px
+        padding-bottom 9px
+    
+    p
+        margin-top 24px
+        font 18px / 35px PT Serif, serif
+        text-align center
+    
+    #figures
+        margin 57px 0 54px
+        max-width 800px
+        width 100%
+        display flex
+        justify-content space-between
+    
+    figure
+        width 182px
+        text-align center
+    
+    figcaption
+        font 18px / 35px PT Serif, serif
+        text-align center
+
+tariffs-anim-duration = 1s
+
+#tariffs
+    display flex
+    flex-direction column
+    align-items center
+    
+    nav
+        position relative
+        max-width 900px
+        width 100%
+        font 24px PT Serif
+    
+    ul
+        display flex
+        justify-content space-around
+        text-align center
+        white-space nowrap
+    
+    li
+        cursor pointer
+        user-select none
+    
+    #highlighter
+        position absolute
+        width 100px
+        height 3px
+        background #7b0712
+        transition left tariffs-anim-duration
+
+#tariffs-slider
+    position relative
+    margin 11px 0 20px
+    max-width 1200px
+    width 100%
+    overflow hidden
+    transition height tariffs-anim-duration
+    
+    #tariffs-slider-content
+        position absolute
+        top 0
+        width 100%
+        transition top tariffs-anim-duration
+    
+    .row
+        padding 42px 0
+        display flex
+    
+    .description
+    .image
+        width 50%
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+    
+    .title
+    .prices
+        align-self stretch
+    
+    .title
+        margin-bottom 40px
+        font 24px / 35px PT Serif, serif
+        color #7b0712
+    
+    .prices
+        display grid
+        grid-template-columns 1fr auto
+        font 18px / 35px PT Serif, serif
+    
+    span
+        white-space nowrap
+    
+    .image
+        padding 0 40px
+        box-sizing border-box
+    
+    img
+        width 100%
+
+visible = 3
+
+#partners
+    display flex
+    flex-direction column
+    align-items center
+    background #f5f5f5
+
+#partners-slider-wrapper
+    margin 30px 0 74px
+    display flex
+    align-items center
+    max-width 900px
+    width 100%
+
+.arrow
+    width 40px
+    height 40px
+    border solid #1a1a1a
+    border-width 2px 2px 0 0
+    cursor pointer
+    transition border-color 0.2s
+
+.arrow:hover {
+    border-color #c0c0c0
+}
+
+#arrow-left
+    transform rotate(-135deg)
+
+#arrow-right
+    transform rotate(45deg)
+
+#partners-slider
+    position relative
+    width 100%
+    overflow hidden
+
+#partners-slider-content
+    position absolute
+    display flex
+    left 0
+    transition-property left
+    
+    .block
+        text-align center
+        
+        p
+            margin-top 20px
+            font 18px / 35px PT Serif, serif
+
+#submit-application
+    display flex
+    flex-direction column
+    align-items center
+    
+    form
+        display flex
+        flex-direction column
+        align-items center
+        
+        input
+            outline none
+    
+        input:not([type='button'])
+            margin 18px 0
+            padding 18px 29px
+            width 419px
+            box-sizing border-box
+            border-radius 20px
+            border 1px solid #202438
+            font 18px PT Serif, serif
+            color #a8a8a8
+        
+        input[type='button']
+            margin 30px 0 94px
+            width 284px
+            height 47px
+            border none
+            border-radius 15px
+            background #7b0712
+            font 18px PT Serif, serif
+            color #fff
+            text-transform uppercase
+
+#footer
+    background #181f36
+    padding: 41px 80px 15px
+    font 18px PT Serif, serif
+    color #ffffff
+    
+#info
+    display grid
+    grid-template-columns repeat(4, 1fr)
+    
+    p
+        margin-bottom: 15px
+        
+    img
+        margin-right: 25px
+        cursor pointer
