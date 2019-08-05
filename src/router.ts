@@ -14,4 +14,14 @@ export default new Router({
       component: Home,
     },
   ],
+  scrollBehavior(to) {
+    const header = document.querySelector('header') as HTMLElement;
+    return {
+      selector: to.hash,
+      offset: {
+        x: 0,
+        y: header.offsetHeight,
+      },
+    };
+  },
 });
