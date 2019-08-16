@@ -1,6 +1,10 @@
 .DS_Store
 node_modules
-/dist
+/static
+
+/public/*
+!/public/index.html
+!/public/favicon.ico
 
 /tests/e2e/videos/
 /tests/e2e/screenshots/
